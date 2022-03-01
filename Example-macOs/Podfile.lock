@@ -1,0 +1,16 @@
+PODS:
+  - BZExtension (0.0.1)
+
+DEPENDENCIES:
+  - BZExtension (from `..`)
+
+EXTERNAL SOURCES:
+  BZExtension:
+    :path: ".."
+
+SPEC CHECKSUMS:
+  BZExtension: 486180e88a272d4639a6dc7fd3754ee1fa8934a8
+
+PODFILE CHECKSUM: ca013967c82bab9049a03ea3ad14ab326324e455
+
+COCOAPODS: 1.9.0
