@@ -1,13 +1,13 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "BZExtension"
-  spec.version      = "0.0.1"
+  spec.version      = "0.1.1"
   spec.summary      = "Functionality extensions and reusable UI components for iOS, macOS, and watchOS development."
   spec.homepage     = "https://github.com/SSBun/BZExtension"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "caishilin" => "caishilin@yahoo.com" }
   spec.social_media_url   = "http://csl.cool"
-  spec.source = { :git => "https://github.com/SSBun/BZExtension.git", :tag => "0.0.1" }
+  spec.source = { :git => "https://github.com/SSBun/BZExtension.git", :tag => "0.1.1" }
 
 
   spec.ios.deployment_target = "10.0"
