@@ -1,5 +1,5 @@
 //
-//  ImageView+Extension.swift
+//  ImageView+BZ.swift
 //  BZExtension
 //
 //  Created by caishilin on 2022/3/1.
@@ -13,8 +13,8 @@ import UIKit
 import AppKit
 #endif
 
-extension ImageView: BZCompatible {}
-public extension BZ where Base: ImageView {
+extension UniversalImageView: BZCompatible {}
+public extension BZ where Base: UniversalImageView {
     
     /// The position of the displayed portion of the image.
     enum Position {
@@ -32,7 +32,7 @@ public extension BZ where Base: ImageView {
     ///   - position: Rendering position of the image.
     ///   - renderWHRatio: The `width / height` ratio of the image view, can be ignored if the image view's frame has been set.
     func set(
-        image: Image?,
+        image: UniversalImage?,
         at position: Position = .center,
         renderWHRatio: CGFloat? = nil
     ) {

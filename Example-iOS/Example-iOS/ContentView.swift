@@ -8,7 +8,9 @@
 import SwiftUI
 import BZExtension
 
+
 struct ContentView: View {
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
@@ -24,3 +26,13 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+class Person {
+    var age: Int = 0
+}
+
+// @Ensure(.constant(100))
+// @Sentry
+// @Ensure(.keyPath(\.isHidden))
+//
+

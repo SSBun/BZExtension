@@ -1,16 +1,41 @@
 PODS:
-  - BZExtension (0.0.1)
+  - BZExtension (0.1.2):
+    - BZExtension/Core (= 0.1.2)
+    - BZExtension/Reactive (= 0.1.2)
+    - BZExtension/UI (= 0.1.2)
+  - BZExtension/Core (0.1.2)
+  - BZExtension/Reactive (0.1.2):
+    - RxRelay
+    - RxSwift
+  - BZExtension/UI (0.1.2)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
 
 DEPENDENCIES:
   - BZExtension (from `..`)
+  - RxCocoa
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - RxCocoa
+    - RxRelay
+    - RxSwift
 
 EXTERNAL SOURCES:
   BZExtension:
     :path: ".."
 
 SPEC CHECKSUMS:
-  BZExtension: 486180e88a272d4639a6dc7fd3754ee1fa8934a8
+  BZExtension: 210c81a9005081a1ca5056417f8e77d82a97969a
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 34868e48256c9df0ee3700cbb3e88f4143377833
+PODFILE CHECKSUM: 433fe56dd0f78bb43e39265bbbdd9e12ed6b03c8
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.11.2

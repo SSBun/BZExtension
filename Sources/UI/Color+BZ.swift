@@ -1,5 +1,5 @@
 //
-//  Color+Extension.swift
+//  Color+BZ.swift
 //  BZExtension
 //
 //  Created by caishilin on 2022/3/1.
@@ -13,8 +13,8 @@ import UIKit
 import AppKit
 #endif
 
-extension Color: BZCompatible {}
-public extension BZ where Base: Color {
+extension UniversalColor: BZCompatible {}
+public extension BZ where Base: UniversalColor {
     /// The hex string format of colors.
     enum HexColorFormat {
         /// (red, green ,blue, alpha)
@@ -46,19 +46,19 @@ public extension BZ where Base: Color {
         _ hexString: String?,
         _ alpha: CGFloat? = nil,
         _ hexColorFormat: HexColorFormat = .rgba
-    ) -> Color {
+    ) -> UniversalColor {
         let suffixAlpha = hexColorFormat == .rgba
         let normalizedHexString: String = normalize(hexString, suffixAlpha)
         var c: CUnsignedInt = 0
         Scanner(string: normalizedHexString).scanHexInt32(&c)
         if suffixAlpha {
-            return Color(
+            return UniversalColor(
                 red:   ColorSuffixAlphaMasks.redValue(c),
                 green: ColorSuffixAlphaMasks.greenValue(c),
                 blue:  ColorSuffixAlphaMasks.blueValue(c),
                 alpha: alpha != nil ? alpha! : ColorSuffixAlphaMasks.alphaValue(c))
         } else {
-            return Color(
+            return UniversalColor(
                 red: ColorPrefixAlphaMasks.redValue(c),
                 green: ColorPrefixAlphaMasks.greenValue(c),
                 blue: ColorPrefixAlphaMasks.blueValue(c),

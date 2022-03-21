@@ -12,10 +12,22 @@ Pod::Spec.new do |spec|
 
   spec.ios.deployment_target = "10.0"
   spec.osx.deployment_target = "10.11"
-
-  spec.source_files  = "Sources/**/*.swift"
   
   spec.swift_version = '5.0'
+
+  spec.subspec 'Core' do |ss|
+    ss.source_files = 'Sources/Core/*.swift'
+  end
+
+  spec.subspec 'UI' do |ss|
+    ss.source_files = 'Sources/UI/*.swift'
+  end
+
+  spec.subspec 'Reactive' do |ss|
+    ss.source_files = 'Sources/Reactive/*.swift'
+    ss.dependency 'RxSwift'
+    ss.dependency 'RxRelay'
+  end
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

@@ -6,5 +6,7 @@ target 'Example-iOS' do
   use_frameworks!
   
   pod "BZExtension", path: '..'
+  pod "RxSwift"
+  pod "RxCocoa"
 
 end
